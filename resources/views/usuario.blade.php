@@ -25,7 +25,15 @@ tipo: <input type="number"><br>
         <td align="center">{{ $dat->id_usuario }}</td>
         <td>{{ $dat->usuario }}</td>
         <td>{{ $dat->password }}</td>
-        <td>{{ $dat->tipo }}</td>
+        <td>
+            @if($dat->tipo == 1)
+                Empleado
+            @elseif($dat->tipo == 2)
+                Cliente
+            @else
+                Desconocido
+            @endif
+        </td>
         <td><a href="{{ route('usuformModificar', $dat->id_usuario) }}">Modificar</a></td>
         <td><a href="{{ route('eliminarUsu', $dat->id_usuario) }}">Eliminar</a></td>
     </tr>
