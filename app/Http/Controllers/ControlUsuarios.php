@@ -22,7 +22,7 @@ class ControlUsuarios extends Controller
     {
         $usuario = new Usuario();
         $usuario->usuario = $request->input('usuario');
-        $usuario->password = bcrypt($request->input('password'));
+        $usuario->password =$request->input('password');
         $usuario->tipo = $request->input('tipo');
         $usuario->save();
 
@@ -47,7 +47,7 @@ class ControlUsuarios extends Controller
     {
         $usuario = Usuario::find($id);
         $usuario->usuario = $request->input('usuario');
-        $usuario->password = bcrypt($request->input('password'));
+        $usuario->password =$request->input('password');
         $usuario->tipo = $request->input('tipo');
         $usuario->save();
 
