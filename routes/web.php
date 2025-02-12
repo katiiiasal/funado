@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControlUsuarios;
 use App\Http\Controllers\ControlProductos;
 
-
+Route::get('/inicio', [ControlVistas::class, "vistaInicio"])->name("inicio");
 Route::get('/usuario', [ControlUsuarios::class, "vistaUsuario"])->name("usuario");
 Route::get('/usuarioformGuardar', [ControlUsuarios::class, "vistaUsuarioGuardar"])->name("usuformGuardar");
 Route::post('/usuarioguardar', [ControlUsuarios::class, "UsuarioGuardar"])->name("guardarUsu");
