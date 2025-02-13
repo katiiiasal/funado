@@ -11,5 +11,14 @@ class Producto extends Model
 
     protected $table = 'productos';
 
-    protected $fillable = ['nombre', 'codigo', 'existencia', 'precio'];
+    protected $primaryKey = 'id';
+
+    public $timestamps = true;
+
+    protected $fillable = [
+        'nombre',
+        'codigo',
+        'existencia',
+        'precio',
+    ];
 }
