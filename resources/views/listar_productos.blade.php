@@ -4,8 +4,6 @@
 
 <h2>Lista de Productos</h2>
 
-<!-- Buscar producto -->
-Producto: <input type="text"> <input type="submit" value="Buscar"> 
 <a href="{{ route('prodformGuardar') }}">Nuevo Registro</a><br><br>
 
 <!-- Tabla de productos -->
