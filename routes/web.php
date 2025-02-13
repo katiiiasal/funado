@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControlUsuarios;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ControlEmpleados;
 
 Route::get('/usuario', [ControlUsuarios::class, "vistaUsuario"])->name("usuario");
 Route::get('/usuarioformGuardar', [ControlUsuarios::class, "vistaUsuarioGuardar"])->name("usuformGuardar");
@@ -18,3 +19,11 @@ Route::post('/productoguardar', [ProductoController::class, "ProductoGuardar"])-
 Route::get("/productoeliminar/{id}", [ProductoController::class, "productoEliminar"])->name("eliminarProd");
 Route::get('/productoformModificar/{id}', [ProductoController::class, "vistaProductoModificar"])->name("prodformModificar");
 Route::post("/productomodificar/{id}", [ProductoController::class, "productoModificar"])->name("modificarProd");
+
+//Rutas Empleados
+Route::get('/empleado', [ControlEmpleados::class, "vistaEmpleado"])->name("empleado");
+Route::get('/empleadoformGuardar', [ControlEmpleados::class, "vistaEmpleadoGuardar"])->name("empformGuardar");
+Route::post('/empleadoguardar', [ControlEmpleados::class, "empleadoGuardar"])->name("guardarEmp");
+Route::get("/empleadoeliminar/{id}", [ControlEmpleados::class, "empleadoEliminar"])->name("eliminarEmp");
+Route::get('/empleadoformModificar/{id}', [ControlEmpleados::class, "vistaEmpleadoModificar"])->name("empformModificar");
+Route::post("/empleadomodificar/{id}", [ControlEmpleados::class, "empleadoModificar"])->name("modificarEmp");
