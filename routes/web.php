@@ -5,6 +5,10 @@ use App\Http\Controllers\ControlUsuarios;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ControlEmpleados;
 
+Route::get('/', function () {
+    return redirect()->route('usuario'); // Redirige a la ruta 'usuario' por defecto
+})->name('inicio');
+// Rutas Usuario
 Route::get('/usuario', [ControlUsuarios::class, "vistaUsuario"])->name("usuario");
 Route::get('/usuarioformGuardar', [ControlUsuarios::class, "vistaUsuarioGuardar"])->name("usuformGuardar");
 Route::post('/usuarioguardar', [ControlUsuarios::class, "UsuarioGuardar"])->name("guardarUsu");
