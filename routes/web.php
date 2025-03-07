@@ -28,6 +28,6 @@ Route::post("/productomodificar/{id}", [ProductoController::class, "productoModi
 Route::get('/empleado', [ControlEmpleados::class, "vistaEmpleado"])->name("empleado");
 Route::get('/empleadoformGuardar', [ControlEmpleados::class, "vistaEmpleadoGuardar"])->name("empformGuardar");
 Route::post('/empleadoguardar', [ControlEmpleados::class, "empleadoGuardar"])->name("guardarEmp");
-Route::get("/empleadoeliminar/{id}", [ControlEmpleados::class, "empleadoEliminar"])->name("eliminarEmp");
+Route::delete("/empleadoeliminar/{id}", [ControlEmpleados::class, "empleadoEliminar"])->name("eliminarEmp");
 Route::get('/empleadoformModificar/{id}', [ControlEmpleados::class, "vistaEmpleadoModificar"])->name("empformModificar");
-Route::post("/empleadomodificar/{id}", [ControlEmpleados::class, "empleadoModificar"])->name("modificarEmp");
+Route::put("/empleadomodificar/{id}", [ControlEmpleados::class, "empleadoModificar"])->name("modificarEmp");
