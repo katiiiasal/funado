@@ -9,10 +9,11 @@
 <body>
     <ul>
         <li><a href="{{ route('inicio')}}">Inicio</a></li>
-        {{-- <li><a href="{{ route('empleado')}}">Empleado</a></li> --}}
+        <li><a href="{{ route('empleado')}}">Empleado</a></li>
         {{-- <li><a href="{{ route('cliente')}}">Cliente</a></li> --}}
         <li><a href="{{ route('producto')}}">Producto</a></li>
         <li><a href="{{ route('usuario')}}">Usuario</a></li>
+        <li><a href="{{ route('logout')}}">Cerrar Sesion</a></li>
     </ul>
     <br><br>
     @yield('contenido')
